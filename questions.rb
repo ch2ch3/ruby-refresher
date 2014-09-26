@@ -52,11 +52,11 @@ def number_of_elements_that_are_palindromes(array)
 end
 
 def shortest_word_in_array(array)
-  array.sort_by(&:length).first
+  array.sort_by(&:size).first
 end
 
 def longest_word_in_array(array)
-  array.sort_by(&:length).last
+  array.sort_by(&:size).last
 end
 
 def total_of_array(array)
@@ -83,6 +83,13 @@ def convert_array_to_a_hash(array)
   Hash[*array]
 end
 
+def get_all_letters_in_array_of_words(array)
+  array.join.split(//).sort
+end
+
+def swap_keys_and_values_in_a_hash(hash)
+  hash.invert
+end
 
 
 
