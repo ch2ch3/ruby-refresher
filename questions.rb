@@ -19,7 +19,7 @@ def reverse_every_element_in_array(array)
 end
 
 def every_possible_pairing_of_students(array)
-  array.combination(2).to_a
+  array.combination(2)
 end
 
 def all_elements_except_first_3(array)
@@ -31,7 +31,7 @@ def add_element_to_beginning_of_array(array, element_to_add)
 end
 
 def array_sort_by_last_letter_of_word(array)
-  array.sort { |x, y| x[-1] <=> y[-1] }
+  array.sort_by { |x| x[-1] }
 end
 
 def get_first_half_of_string(string)
@@ -40,7 +40,7 @@ def get_first_half_of_string(string)
 end
 
 def make_numbers_negative(number)
-  number < 0 ? number : 0 - number
+  number < 0 ? number : -number
 end
 
 def separate_array_into_even_and_odd_numbers(array)
@@ -52,11 +52,11 @@ def number_of_elements_that_are_palindromes(array)
 end
 
 def shortest_word_in_array(array)
-  array.sort_by(&:size).first
+  array.min_by(&:size)
 end
 
 def longest_word_in_array(array)
-  array.sort_by(&:size).last
+  array.max_by(&:size)
 end
 
 def total_of_array(array)
@@ -72,7 +72,7 @@ def turn_symbol_into_string(symbol)
 end
 
 def average_of_array(array)
-  (array.inject(:+) / ('%.1f' % array.length).to_f).ceil
+  (array.inject(:+).to_f / array.length).ceil
 end
 
 def get_elements_until_greater_than_five(array)
@@ -84,7 +84,7 @@ def convert_array_to_a_hash(array)
 end
 
 def get_all_letters_in_array_of_words(array)
-  array.join.split(//).sort
+  array.join.split(//).uniq.sort
 end
 
 def swap_keys_and_values_in_a_hash(hash)
@@ -92,7 +92,7 @@ def swap_keys_and_values_in_a_hash(hash)
 end
 
 def add_together_keys_and_values(hash)
-  (hash.keys).concat(hash.values).inject(:+)
+  hash.flatten.inject(:+)
 end
 
 def remove_capital_letters_from_string(string)
@@ -121,8 +121,7 @@ def titleize_a_string(string)
 end
 
 def check_a_string_for_special_characters(string)
-  special_chars = ["!", "@", "#", "$", "%", "^"]
-  special_chars.any? { |x| string.include?(x) }
+  !(string =~ /\W/).nil?
 end
 
 def get_upper_limit_of(range)
