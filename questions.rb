@@ -133,6 +133,29 @@ def is_a_3_dot_range?(range)
   range.exclude_end?
 end
 
+def square_root_of(number)
+  Math.sqrt(number)
+end
+
+def word_count_a_file(file)
+  File.read('lorem.txt').split.length
+end
+
+def call_method_from_string(method)
+  send(method)
+end
+
+def is_a_2014_bank_holiday?(time)
+  bank_holidays = ['1/1', '18/4', '21/4', '5/5', '26/5', '25/8', '25/12', '26/12']
+  bank_holidays.include?("#{time.day}/#{time.month}")
+end
+
+def your_birthday_is_on_a_friday_in_the_year(birthday)
+  one_year = 31536000
+  birthday += one_year until birthday.friday?
+  birthday.year
+end
+
 
 
 

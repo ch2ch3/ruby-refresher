@@ -182,7 +182,7 @@ describe 'the Friday test :)' do
     expect(b).to be true
   end
 
-  fit 'square_root_of' do
+  specify 'square_root_of' do
     a = square_root_of 9
     b = square_root_of 3
     expect(a).to eq 3.0
@@ -202,8 +202,8 @@ describe 'the Friday test :)' do
     a = is_a_2014_bank_holiday?(Time.new(2014, 8, 25))
     b = is_a_2014_bank_holiday?(Time.new(2014, 8, 26))
 
-    expect(a).to be_true
-    expect(b).to be_false
+    expect(a).to be true
+    expect(b).to be false
   end
 
   specify 'your_birthday_is_on_a_friday_in_the_year' do
