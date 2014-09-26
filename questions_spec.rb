@@ -1,11 +1,6 @@
 require 'rspec'
 require_relative './questions'
 
-RSpec.configure do |config|
-  config.color = true
-  config.formatter = :documentation
-end
-
 describe 'the Friday test :)' do
   
   specify 'select_elements_starting_with_a' do
