@@ -23,7 +23,7 @@ describe 'the Friday test :)' do
     expect(n).to eq ['a', 'b', 'c']
   end
 
-  fit 'reverse_every_element_in_array' do
+  specify 'reverse_every_element_in_array' do
     n = reverse_every_element_in_array ['dog', 'monkey', 'elephant']
     expect(n).to eq ['god', 'yeknom', 'tnahpele']
   end
@@ -45,7 +45,7 @@ describe 'the Friday test :)' do
     expect(n).to eq [1, 2, 3, 4, 5]
   end
 
-  specify 'array_sort_by_last_letter_of_word' do
+  fit 'array_sort_by_last_letter_of_word' do
     n = array_sort_by_last_letter_of_word ['sky', 'puma', 'maker']
     expect(n).to eq ['puma', 'maker', 'sky']
   end
