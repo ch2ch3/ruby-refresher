@@ -66,7 +66,7 @@ describe 'the Friday test :)' do
     expect(b).to eq -7
   end
 
-  fit 'separate_array_into_even_and_odd_numbers' do
+  specify 'separate_array_into_even_and_odd_numbers' do
     n = separate_array_into_even_and_odd_numbers [1, 2, 3, 4, 5, 6, 7]
     expect(n).to eq [[2, 4, 6], [1, 3, 5, 7]]
   end
@@ -76,7 +76,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 3
   end
 
-  specify 'shortest_word_in_array' do
+  fit 'shortest_word_in_array' do
     n = shortest_word_in_array %w(here is a bunch of words of different lengths)
     expect(n).to eq 'a'
   end

@@ -43,8 +43,13 @@ def make_numbers_negative(number)
   number < 0 ? number : 0 - number
 end
 
+def separate_array_into_even_and_odd_numbers(array)
+  array.partition(&:even?)
+end
 
-
+def number_of_elements_that_are_palindromes(array)
+  array.select { |x| x == x.reverse }.length
+end
 
 
 
