@@ -111,6 +111,15 @@ def format_date_nicely(time)
   "#{time.day}/#{time.month}/#{time.year}"
 end
 
+def get_domain_name_from_email_address(email)
+  email.slice(/@.*\./)[1..-2]
+end
+
+def titleize_a_string(string)
+  uncapitalized_words = ["the", "and"]
+  string.capitalize.split.map { |word| uncapitalized_words.include?(word) ? word : word.capitalize }.join(" ")
+end
+
 
 
 
