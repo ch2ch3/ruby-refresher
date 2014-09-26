@@ -120,6 +120,19 @@ def titleize_a_string(string)
   string.capitalize.split.map { |word| uncapitalized_words.include?(word) ? word : word.capitalize }.join(" ")
 end
 
+def check_a_string_for_special_characters(string)
+  special_chars = ["!", "@", "#", "$", "%", "^"]
+  special_chars.any? { |x| string.include?(x) }
+end
+
+def get_upper_limit_of(range)
+  range.end
+end
+
+def is_a_3_dot_range?(range)
+  range.exclude_end?
+end
+
 
 
 
