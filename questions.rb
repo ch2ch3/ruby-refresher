@@ -29,3 +29,42 @@ end
 def add_element_to_beginning_of_array(array, element_to_add)
   array.unshift(element_to_add)
 end
+
+def array_sort_by_last_letter_of_word(array)
+  array.sort { |x, y| x[-1] <=> y[-1] }
+end
+
+def get_first_half_of_string(string)
+  half_of_string = (string.length / 2.0).ceil
+  string[0..(half_of_string - 1)]
+end
+
+def make_numbers_negative(number)
+  number < 0 ? number : 0 - number
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
