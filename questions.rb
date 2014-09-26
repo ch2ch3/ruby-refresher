@@ -71,6 +71,18 @@ def turn_symbol_into_string(symbol)
   symbol.to_s
 end
 
+def average_of_array(array)
+  (array.inject(:+) / ('%.1f' % array.length).to_f).ceil
+end
+
+def get_elements_until_greater_than_five(array)
+  array[0..5]
+end
+
+def convert_array_to_a_hash(array)
+  Hash[*array]
+end
+
 
 
 
