@@ -51,6 +51,18 @@ def number_of_elements_that_are_palindromes(array)
   array.select { |x| x == x.reverse }.length
 end
 
+def shortest_word_in_array(array)
+  array.sort_by(&:length).first
+end
+
+def longest_word_in_array(array)
+  array.sort_by(&:length).last
+end
+
+
+
+
+
 
 
 
