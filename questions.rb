@@ -59,9 +59,17 @@ def longest_word_in_array(array)
   array.sort_by(&:length).last
 end
 
+def total_of_array(array)
+  array.inject(:+)
+end
 
+def double_array(array)
+  array.concat(array)
+end
 
-
+def turn_symbol_into_string(symbol)
+  symbol.to_s
+end
 
 
 
