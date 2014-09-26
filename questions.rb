@@ -156,38 +156,8 @@ def your_birthday_is_on_a_friday_in_the_year(birthday)
 end
 
 def count_words_of_each_length_in_a_file(file)
-  contents = File.read('lorem.txt').gsub(/\.|,/, '').split
+  contents = File.read('lorem.txt').gsub(/[^\w\d\s]/, '').split
   frequencies = Hash.new(0)
-  contents.map(&:length).each { |word| frequencies[word] += 1 }
+  contents.each { |word| frequencies[word.length] += 1 }
   frequencies
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
